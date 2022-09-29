@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <!-- <div class="overlay"></div> -->
+    <nav>
+      <img src="./images/logo.svg" alt="logo">
+      <img src="./images/icon-menu.svg" class='hamburder-menu openbtn' alt="menu" onclick="openNav()">
+      <div class="overlay"></div>
+      <div class="navbar-buttons">
+        <img src="./images/icon-close-menu.svg" alt="close-menu" class="closebtn" onclick="closeNav()">
+        <ul class="normal hidden">
+          <li>
+            <div class="text-and-arrow">
+              <button onclick="myFunction_1()" class="no-border-btn dropdown-btn" id="features-btn">Features</button>
+              <img src="./images/icon-arrow-down.svg" id="arrow1_down" alt="arrow">
+              <img src="./images/icon-arrow-up.svg" class="arrow_hidden" id="arrow1_up" alt="arrow">
+            </div>
+            <div id="myDropdown_1" class="dropdown-content">
+              <div class="img-and-link" id="todolist-id">
+                <img src="./images/icon-todo.svg" alt="todolist">
+                <a href="#">Todo List</a>
+              </div>
+              <div class="img-and-link">
+                <img src="./images/icon-calendar.svg" alt="todolist">
+                <a href="#">Calendar</a>
+              </div>
+              <div class="img-and-link" id="reminds-id">
+                <img src="./images/icon-reminders.svg" alt="todolist">
+                <a href="#">Remindes</a>
+              </div>
+              <div class="img-and-link">
+                <img src="./images/icon-planning.svg" alt="todolist">
+                <a href="#">Planning</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="text-and-arrow">
+              <button onclick="myFunction_2()" class="no-border-btn dropdown-btn" id="company-btn">Company</button> 
+              <img src="./images/icon-arrow-down.svg" id="arrow2_down" alt="arrow">
+              <img src="./images/icon-arrow-up.svg" class="arrow_hidden" id="arrow2_up" alt="arrow">
+            </div>
+            <div id="myDropdown_2" class="dropdown-content">
+              <a href="#">History</a>
+              <a href="#">Our Team</a>
+              <a href="#">Blog</a>
+            </div>
+          </li>
+          <li><button class="no-border-btn" id="careers-btn">Careers</button></li>
+          <li><button class="no-border-btn" id="about-btn">About</button></li>
+        </ul>
+        <div class="login-register hidden">
+          <button class="no-border-btn login-btn">Login</button>
+          <button class="register-btn">Register</button>
+        </div>
+      </div>
+     
+    </nav>
+    <section>
+      <div class="left-section">
+        <h1 id="big-text">Make remote work</h1>
+        <p class="sect-text">Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.</p>
+        <button class="learn-more">Learn more</button>
+        <div class="section-logos">
+          <img src="./images/client-databiz.svg" alt="databiz">
+          <img src="./images/client-audiophile.svg" id="audiophile-img" alt="audiophile">
+          <img src="./images/client-meet.svg" alt="meet">
+          <img src="./images/client-maker.svg" alt="maker">
+        </div>
+      </div>
+      <div class="right-section">
+        <picture>
+          <source media="(min-width: 851px)" srcset="./images/image-hero-desktop.png">
+          <source media="(max-width: 850px)" srcset="./images/image-hero-mobile.png">
+          <img src="OtherImage.png" alt="IfItDoesntMatchAnyMedia">
+        </picture>
+      </div>
+    </section>
+  </main>
+
+  
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
