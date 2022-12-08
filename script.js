@@ -1,43 +1,101 @@
-function myFunction_1() {
-    document.getElementById("myDropdown_1").classList.toggle("show");
-    document.getElementById("arrow1_down").classList.toggle("arrow_hidden")
-    document.getElementById("arrow1_up").classList.toggle("arrow_visible")
+function toggleSideMenu() {
+  document.querySelector(".sidemenu").classList.toggle("notVisible")
+  document.querySelector(".sidemenu").classList.toggle("full-width")
 }
 
-function myFunction_2() {
-    document.getElementById("myDropdown_2").classList.toggle("show");
-    document.getElementById("arrow2_down").classList.toggle("arrow_hidden")
-    document.getElementById("arrow2_up").classList.toggle("arrow_visible")
-}
-
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-btn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-          document.getElementById("arrow1_up").classList.remove("arrow_visible")
-          document.getElementById("arrow2_up").classList.remove("arrow_visible")
-          document.getElementById("arrow1_down").classList.remove("arrow_hidden")
-          document.getElementById("arrow2_down").classList.remove("arrow_hidden")
-        }
-      }
-    }
+function closeSideMenu() {
+  document.querySelector(".sidemenu").classList.toggle("notVisible")
+  document.querySelector(".sidemenu").classList.toggle("full-width")
 }
 
 
-function openNav() {
-    // document.querySelector(".navbar-buttons").style.width = "70%";
-    // document.querySelector(".main").classList.add = "overlay";
-    document.querySelector(".navbar-buttons").classList.add("sidebar")
-    document.querySelector(".overlay").style.display="block";
+function toggleDropdown1() {
+  //black font on click
+  document.querySelector(".features-link").classList.toggle("active")
+  //mobile dropdown
+  if(!document.querySelector(".arrow1down").classList.contains("hidden")) {
+    document.querySelector(".arrow1down").classList.add("rotateUp")
+    document.querySelector(".arrow1down").addEventListener("animationend", () => {
+      console.log('working')
+      document.querySelector(".arrow1up").classList.remove("hidden")
+      document.querySelector(".arrow1down").classList.add("hidden")
+      document.querySelector(".arrow1down").classList.remove("rotateUp")
+    }, false);
+    document.querySelector(".dropdown-content1").classList.toggle("hidden")
+  } else {
+    document.querySelector(".arrow1up").classList.add("rotateDown")
+    document.querySelector(".arrow1up").addEventListener("animationend", () => {
+      document.querySelector(".arrow1down").classList.remove("hidden")
+      document.querySelector(".arrow1up").classList.add("hidden")
+      document.querySelector(".arrow1up").classList.remove("rotateDown")
+    }, false);
+    document.querySelector(".dropdown-content1").classList.toggle("hidden")
+  }
+
+  //desktop dropdown
+
+   if(!document.querySelector(".arrow1downDesktop").classList.contains("hidden")) {
+    document.querySelector(".arrow1downDesktop").classList.add("rotateUp")
+    document.querySelector(".arrow1downDesktop").addEventListener("animationend", () => {
+      console.log('working')
+      document.querySelector(".arrow1upDesktop").classList.remove("hidden")
+      document.querySelector(".arrow1downDesktop").classList.add("hidden")
+      document.querySelector(".arrow1downDesktop").classList.remove("rotateUp")
+    }, false);
+    document.querySelector(".dropdown-content1Desktop").classList.toggle("hidden")
+  } else {
+    document.querySelector(".arrow1upDesktop").classList.add("rotateDown")
+    document.querySelector(".arrow1upDesktop").addEventListener("animationend", () => {
+      document.querySelector(".arrow1downDesktop").classList.remove("hidden")
+      document.querySelector(".arrow1upDesktop").classList.add("hidden")
+      document.querySelector(".arrow1upDesktop").classList.remove("rotateDown")
+    }, false);
+    document.querySelector(".dropdown-content1Desktop").classList.toggle("hidden")
+  }
+
 }
-  
-  /* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-    // document.querySelector(".navbar-buttons").style.width = "0px";
-    document.querySelector(".navbar-buttons").classList.remove("sidebar")
-    document.querySelector(".overlay").style.display="none";
+
+function toggleDropdown2() {
+  //black font on click
+  document.querySelector(".company-link").classList.toggle("active")
+  //mobile dropdown
+  if(!document.querySelector(".arrow2down").classList.contains("hidden")) {
+    document.querySelector(".arrow2down").classList.add("rotateUp")
+    document.querySelector(".arrow2down").addEventListener("animationend", () => {
+      console.log('working')
+      document.querySelector(".arrow2up").classList.remove("hidden")
+      document.querySelector(".arrow2down").classList.add("hidden")
+      document.querySelector(".arrow2down").classList.remove("rotateUp")
+    }, false);
+    document.querySelector(".dropdown-content2").classList.toggle("hidden")
+  } else {
+    document.querySelector(".arrow2up").classList.add("rotateDown")
+    document.querySelector(".arrow2up").addEventListener("animationend", () => {
+      document.querySelector(".arrow2down").classList.remove("hidden")
+      document.querySelector(".arrow2up").classList.add("hidden")
+      document.querySelector(".arrow2up").classList.remove("rotateDown")
+    }, false);
+    document.querySelector(".dropdown-content2").classList.toggle("hidden")
+  }
+
+  //desktop dropdown
+
+  if(!document.querySelector(".arrow2downDesktop").classList.contains("hidden")) {
+    document.querySelector(".arrow2downDesktop").classList.add("rotateUp")
+    document.querySelector(".arrow2downDesktop").addEventListener("animationend", () => {
+      // console.log('working')
+      document.querySelector(".arrow2upDesktop").classList.remove("hidden")
+      document.querySelector(".arrow2downDesktop").classList.add("hidden")
+      document.querySelector(".arrow2downDesktop").classList.remove("rotateUp")
+    }, false);
+    document.querySelector(".dropdown-content2Desktop").classList.toggle("hidden")
+  } else {
+    document.querySelector(".arrow2upDesktop").classList.add("rotateDown")
+    document.querySelector(".arrow2upDesktop").addEventListener("animationend", () => {
+      document.querySelector(".arrow2downDesktop").classList.remove("hidden")
+      document.querySelector(".arrow2upDesktop").classList.add("hidden")
+      document.querySelector(".arrow2upDesktop").classList.remove("rotateDown")
+    }, false);
+    document.querySelector(".dropdown-content2Desktop").classList.toggle("hidden")
+  }
 }

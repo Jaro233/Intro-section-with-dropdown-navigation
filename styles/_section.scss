@@ -1,0 +1,121 @@
+@import "./variables";
+
+.right-side {
+    margin-top: 1rem;
+}
+
+.hero-img {
+    height: 100%;
+    width: 100%;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+    margin-top: 1.7rem;
+}
+
+.big-text {
+    font-size: 2rem;
+    color: $almostBlack;
+}
+
+.p-text {
+    padding: 0 0.2rem;
+}
+
+.learn-more-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    color:$almostWhite;
+    background-color: $almostBlack;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: all 0.25s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+        background-color: $almostWhite;
+    }
+}
+
+.logos-div {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    // gap: 1rem;
+    justify-content: space-between;
+    img {
+        height: 100%;
+        width: 20%;
+    }
+
+    .audiophile {
+        width: 15%;
+    }
+
+}
+
+@media screen and (min-width: 640px) {
+    .big-text {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        max-height: 36.25rem;
+        max-width: 70.5rem;
+        height: 100%;
+        margin: auto;
+        margin-top: 4rem;
+        gap: 2rem;
+    }
+
+    // .img-hero-desktop {
+    //     object-fit: cover;
+    //     object-position: center;
+    //     width: 100%;
+    // }
+
+    .left-side {
+        align-items: flex-start;
+        text-align: left;
+        gap: 3rem;
+        margin-top: 5rem;
+    }
+
+    .p-text {
+        font-size: 1.2rem;
+        padding-right: 2rem;
+    }
+    
+    .big-text {
+        font-size: 4.5rem;
+        padding-right: 0.7rem;
+        width: 95%;
+    }
+
+    .logos-div {
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .p-text {
+        padding-right: 9rem;
+    }
+
+    .big-text {
+        padding-right: 4rem;
+    }
+}
